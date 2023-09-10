@@ -1,0 +1,37 @@
+use database DEMO_DATABASE;
+CREATE OR REPLACE TABLE SALES
+( 
+order_id string ,
+order_date varchar (30),
+ship_date varchar (40),
+ship_mode varchar (20),
+customer_name varchar (40),
+segment varchar (30),
+state varchar (40),
+country varchar (30),
+market varchar (40),
+region varchar (30),
+product_id varchar(50),
+category varchar (30),
+sub_category varchar (40),
+product_name string ,
+sales varchar (30),
+quantity int ,
+discount float ,
+profit float ,
+shipping_cost float ,
+order_priority varchar (40),
+year int
+) ;
+ select * from sales;
+
+ describe table sales;
+  select  distinct discount from sales ;
+  select *,
+  case
+  when discount > 0 then 'True'
+  else 'false'
+  end as discount_value
+  from sales ;
+
+ 
